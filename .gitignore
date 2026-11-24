@@ -1,0 +1,51 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Google OAuth / credentials
+storage/private/
+database/estrutura_curriculo.json
+database/curriculos_exemplo/
+client_secret*.json
+credentials.json
+token.json
+*.pem
+*.key
+*.p12
+*.docx
+*.pdf
+*.zip
+
+# Node / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python / Backend
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# Arquivos de currículo e estado local do Supabase
+/storage/curriculos/**
+!/storage/curriculos/modelos/
+!/storage/curriculos/gerados/
+!/storage/curriculos/modelos/.gitkeep
+!/storage/curriculos/gerados/.gitkeep
+database/supabase/.temp/
+database/supabase/.branches/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

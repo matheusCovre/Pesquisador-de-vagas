@@ -1,0 +1,2 @@
+-- Os quatro modelos de currículo são cadastrados pela migração inicial.
+-- Não carregar documentos, credenciais ou dados pessoais neste arquivo.

@@ -1,0 +1,28 @@
+# Backend API
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-dotenv>=1.0.1
+pydantic-settings>=2.6.0
+email-validator>=2.2.0
+python-multipart>=0.0.17
+
+# Database (Supabase)
+supabase>=2.10.0
+
+# AI Agents & Research
+crewai>=0.80.0
+crewai-tools>=0.14.0
+tavily-python>=0.5.0
+openai>=1.55.0
+
+# Word & PDF Processing
+python-docx>=1.1.2
+docxtpl>=0.19.0
+pypdf>=5.1.0
+pymupdf>=1.24.0
+reportlab>=4.2.5
+
+# Google / Email Automation
+google-api-python-client>=2.154.0
+google-auth-httplib2>=0.2.0
+google-auth-oauthlib>=1.2.1

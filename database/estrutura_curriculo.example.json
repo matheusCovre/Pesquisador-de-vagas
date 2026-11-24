@@ -1,0 +1,72 @@
+{
+  "candidate": {
+    "name": "Pessoa Exemplo",
+    "email": "candidato@example.com",
+    "phone": "",
+    "location": "Cidade Exemplo",
+    "linkedin": "",
+    "github": ""
+  },
+  "variants": [
+    {
+      "id": "portfolio-exemplo",
+      "title": "Currículo de demonstração",
+      "headline": "Desenvolvimento de Software",
+      "summary": "Perfil fictício com experiência em desenvolvimento e testes de aplicações web.",
+      "skills": [
+        {
+          "category": "Desenvolvimento",
+          "description": "Python, JavaScript, Git"
+        }
+      ],
+      "experiences": [
+        {
+          "company": "Empresa Exemplo",
+          "role": "Pessoa Desenvolvedora Júnior",
+          "period": "2023 – 2025",
+          "location": "Remoto",
+          "highlights": [
+            "Implementação de testes automatizados para uma aplicação web."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "agenda",
+          "title": "Agenda de Estudos",
+          "technologies": ["Python"],
+          "description": "Aplicação para organizar tarefas por prazo."
+        },
+        {
+          "id": "catalogo",
+          "title": "Catálogo de Livros",
+          "technologies": ["JavaScript"],
+          "description": "Interface para filtrar livros por assunto."
+        },
+        {
+          "id": "painel",
+          "title": "Painel de Hábitos",
+          "technologies": ["SQLite"],
+          "description": "Registro e consulta de atividades diárias."
+        }
+      ],
+      "selectedProjectIds": ["agenda", "catalogo", "painel"],
+      "research": [
+        {
+          "description": "Apresentação didática sobre testes de aplicações web."
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Tecnologia em Sistemas para Internet",
+      "institution": "Instituto Exemplo",
+      "period": "2021 – 2023"
+    }
+  ],
+  "languages": [
+    { "name": "Português", "level": "Nativo" },
+    { "name": "Inglês", "level": "Intermediário" }
+  ]
+}

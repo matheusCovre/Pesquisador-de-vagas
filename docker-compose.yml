@@ -1,0 +1,38 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file:
+      - ./.env
+    environment:
+      - CURRICULOS_DIR=/data/curriculos
+      - GUARDRAIL_SOURCE_PATH=/data/private/estrutura_curriculo.json
+      - OTEL_SDK_DISABLED=true
+      - CREWAI_TRACING_ENABLED=false
+      - GMAIL_TOKEN_PATH=/data/private/gmail_token.json
+      - GMAIL_OAUTH_DB_PATH=/data/private/gmail_oauth.sqlite3
+      - SUPABASE_URL=${SUPABASE_URL:-http://host.docker.internal:54321}
+      - SUPABASE_KEY=${SUPABASE_KEY:?Defina SUPABASE_KEY no arquivo .env}
+    volumes:
+      - ./backend:/app
+      - ./storage/curriculos:/data/curriculos
+      - ./storage/private:/data/private
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "127.0.0.1:5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    depends_on:
+      - backend
+    restart: unless-stopped

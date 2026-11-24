@@ -1,0 +1,11 @@
+node_modules
+dist
+.git
+.env
+.env.*
+client_secret*.json
+credentials.json
+token.json
+*.pem
+*.key
+*.p12
