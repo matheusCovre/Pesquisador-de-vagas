@@ -25,8 +25,9 @@ npx --yes supabase --workdir database start
    da API fica em http://localhost:8000/docs.
 4. Confira se o currículo inicial mostra **Pessoa Exemplo**. Clique em
    **Verificar** e exporte em **PDF** ou **DOCX**. Para testar a IA, envie
-   no chat “Adapte o currículo para destacar os testes automatizados da base”. Com as
-   duas chaves, use **Pesquisar Vagas** para testar a busca na web.
+   no chat “Adapte o currículo para destacar os testes automatizados da base”.
+   Com as duas chaves, use **Pesquisar Vagas** para testar a busca na web.
+5. Siga [Coloque seu currículo](#coloque-seu-currículo) para usar seus próprios dados.
 
 ## Chaves de API
 
@@ -70,14 +71,16 @@ de fatos. O projeto inclui dois currículos fictícios no mesmo
 desenvolvimento web e outro a testes de software. O passo de instalação já copia
 esse arquivo para o local que a aplicação lê.
 
-1. Abra `storage/private/estrutura_curriculo.json` e use seu currículo atual
-   como referência para editar o JSON. Se você tem o currículo em PDF ou DOCX,
-   transcreva os fatos relevantes para o arquivo local.
+### Coloque seu currículo
+
+1. Abra `storage/private/estrutura_curriculo.json` e substitua os dados fictícios
+   pelos do seu currículo. Se o seu currículo está em PDF ou DOCX, copie os
+   dados relevantes para os campos do JSON.
 2. Preencha `candidate` com seus dados, `education` com a formação e
    `languages` com os idiomas. Em `variants`, mantenha pelo menos uma variante
    com título profissional (`headline`), resumo (`summary`), competências
    (`skills`) e experiências (`experiences`). Use listas vazias para seções sem
-   conteúdo e remova os exemplos fictícios que você não pretende usar.
+   conteúdo.
 3. Se tiver currículos para áreas diferentes, adicione uma entrada em
    `variants` para cada área. A primeira entrada é exibida ao abrir a página.
    A IA pode selecionar fatos das demais variantes ao adaptar o currículo.
@@ -85,9 +88,7 @@ esse arquivo para o local que a aplicação lê.
    Use **Verificar** para conferir o currículo contra a base. Se aparecer
    `approved_source_unavailable`, confira o caminho e a sintaxe do JSON.
 
-Os PDFs e DOCXs servem como referência para preencher o JSON. A seleção
-automática de fatos usa apenas o JSON revisado. Para aprovar uma experiência
-que faltou, acrescente-a ao arquivo local antes de pedir uma nova adaptação.
+Para incluir uma experiência em uma adaptação, registre-a primeiro no JSON local.
 
 O Git ignora `.env`, a base pessoal, tokens OAuth e documentos locais. As
 exportações ficam em `storage/curriculos/gerados/`. A aplicação é de uso
