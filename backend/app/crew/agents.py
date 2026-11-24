@@ -14,7 +14,7 @@ def _build_llm(model_name: str) -> LLM:
     settings = get_settings()
     if not settings.OPENAI_API_KEY:
         raise ValueError("OPENAI_API_KEY não configurada no .env")
-    return LLM(model=model_name, api_key=settings.OPENAI_API_KEY)
+    return LLM(model=model_name, api_key=settings.OPENAI_API_KEY, api="responses", store=False)
 
 
 def _create_agent(

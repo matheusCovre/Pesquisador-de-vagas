@@ -13,10 +13,10 @@ class Settings(BaseSettings):
 
     # OpenAI & Models
     OPENAI_API_KEY: str = ""
-    MODEL_WRITE: str = "gpt-4o-mini"
-    MODEL_PESQUISA: str = "gpt-4o-mini"
-    MODEL_CHAT: str = "gpt-4o-mini"
-    MODEL_PLANILHA: str = "gpt-4o-mini"
+    MODEL_WRITE: str = "gpt-6-luna"
+    MODEL_PESQUISA: str = "gpt-6-luna"
+    MODEL_CHAT: str = "gpt-6-luna"
+    MODEL_PLANILHA: str = "gpt-6-luna"
 
     # Tavily Search
     TAVILY_API_KEY: str = ""

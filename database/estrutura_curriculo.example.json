@@ -56,6 +56,39 @@
           "description": "Apresentação didática sobre testes de aplicações web."
         }
       ]
+    },
+    {
+      "id": "testes-exemplo",
+      "title": "Currículo de demonstração para testes de software",
+      "headline": "Testes de Software",
+      "summary": "Perfil fictício com experiência em automação de testes e documentação de falhas.",
+      "skills": [
+        {
+          "category": "Qualidade de software",
+          "description": "pytest, testes de regressão, documentação de falhas"
+        }
+      ],
+      "experiences": [
+        {
+          "company": "Empresa Exemplo",
+          "role": "Pessoa Desenvolvedora Júnior",
+          "period": "2023 – 2025",
+          "location": "Remoto",
+          "highlights": [
+            "Implementação de testes automatizados para uma aplicação web.",
+            "Documentação de falhas encontradas em testes de regressão."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "id": "suite-catalogo",
+          "title": "Suíte de Testes do Catálogo",
+          "technologies": ["Python", "pytest"],
+          "description": "Testes de regressão para os filtros de um catálogo de livros."
+        }
+      ],
+      "selectedProjectIds": ["suite-catalogo"]
     }
   ],
   "education": [
